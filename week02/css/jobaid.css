@@ -11,8 +11,9 @@ html {
 }
 
 body {
-    margin: 10px;
-    margin-right: 210px;
+    margin: 50px;
+    margin-right: 50px;
+    text-align: center;
 }
 
 #maincontent {
@@ -93,7 +94,7 @@ sub {
 }
 
 img {
-    border: 0
+    border:2px solid #000000;
 }
 
 .wrap {
