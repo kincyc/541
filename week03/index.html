@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en">
+<head>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <link rel="stylesheet" href="css/cupertino/jquery-ui-1.10.4.custom.css" />
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.custom.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" />
+  <style type="text/css">
+/*<![CDATA[*/
+        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  /*]]>*/
+  </style>
+
+  <title>Random Acts of Interactivity</title>
+  
+	<script type="text/javascript" src="js/jssor.slider-21.1.5.mini.js"></script>
+    <!-- use jssor.slider-21.1.5.debug.js instead for debug -->
+	<script>
+	    jQuery(document).ready(function ($) {
+	        
+	        var jssor_1_SlideoTransitions = [
+	          [{b:0,d:600,y:-290,e:{y:27}}],
+	          [{b:0,d:1000,y:185},{b:1000,d:500,o:-1},{b:1500,d:500,o:1},{b:2000,d:1500,r:360},{b:3500,d:1000,rX:30},{b:4500,d:500,rX:-30},{b:5000,d:1000,rY:30},{b:6000,d:500,rY:-30},{b:6500,d:500,sX:1},{b:7000,d:500,sX:-1},{b:7500,d:500,sY:1},{b:8000,d:500,sY:-1},{b:8500,d:500,kX:30},{b:9000,d:500,kX:-30},{b:9500,d:500,kY:30},{b:10000,d:500,kY:-30},{b:10500,d:500,c:{x:87.50,t:-87.50}},{b:11000,d:500,c:{x:-87.50,t:87.50}}],
+	          [{b:0,d:600,x:410,e:{x:27}}],
+	          [{b:-1,d:1,o:-1},{b:0,d:600,o:1,e:{o:5}}],
+	          [{b:-1,d:1,c:{x:175.0,t:-175.0}},{b:0,d:800,c:{x:-175.0,t:175.0},e:{c:{x:7,t:7}}}],
+	          [{b:-1,d:1,o:-1},{b:0,d:600,x:-570,o:1,e:{x:6}}],
+	          [{b:-1,d:1,o:-1,r:-180},{b:0,d:800,o:1,r:180,e:{r:7}}],
+	          [{b:0,d:1000,y:80,e:{y:24}},{b:1000,d:1100,x:570,y:170,o:-1,r:30,sX:9,sY:9,e:{x:2,y:6,r:1,sX:5,sY:5}}],
+	          [{b:2000,d:600,rY:30}],
+	          [{b:0,d:500,x:-105},{b:500,d:500,x:230},{b:1000,d:500,y:-120},{b:1500,d:500,x:-70,y:120},{b:2600,d:500,y:-80},{b:3100,d:900,y:160,e:{y:24}}],
+	          [{b:0,d:1000,o:-0.4,rX:2,rY:1},{b:1000,d:1000,rY:1},{b:2000,d:1000,rX:-1},{b:3000,d:1000,rY:-1},{b:4000,d:1000,o:0.4,rX:-1,rY:-1}]
+	        ];
+	        
+	        var jssor_1_options = {
+	          $AutoPlay: false,
+	          $Idle: 2000,
+	          $CaptionSliderOptions: {
+	            $Class: $JssorCaptionSlideo$,
+	            $Transitions: jssor_1_SlideoTransitions,
+	            $Breaks: [
+	              [{d:2000,b:1000}]
+	            ]
+	          },
+	          $ArrowNavigatorOptions: {
+	            $Class: $JssorArrowNavigator$
+	          },
+	          $BulletNavigatorOptions: {
+	            $Class: $JssorBulletNavigator$
+	          }
+	        };
+	        
+	        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+	        
+	        //responsive code begin
+	        //you can remove responsive code if you don't want the slider scales while window resizing
+	        function ScaleSlider() {
+	            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+	            if (refSize) {
+	                refSize = Math.min(refSize, 600);
+	                jssor_1_slider.$ScaleWidth(refSize);
+	            }
+	            else {
+	                window.setTimeout(ScaleSlider, 30);
+	            }
+	        }
+	        ScaleSlider();
+	        $(window).bind("load", ScaleSlider);
+	        $(window).bind("resize", ScaleSlider);
+	        $(window).bind("orientationchange", ScaleSlider);
+	        //responsive code end
+	    });
+	  $(function() {
+		  $("#tabs").tabs();
+		  $("#presser").on("click", function(){
+			  x = parseInt(($("#icecream").attr('src').slice(-6,-4))) + 1;
+			  if (x > 4) {
+				  x = 1
+			  }
+			  $('#icecream').attr('src', 'images/alice0' + x + '.jpg');
+			  switch(x) {
+				  case 1: $('#presser').val('Get Ice Cream');break;
+				  case 2: $('#presser').val('But Me First');break;
+				  case 3: $('#presser').val('So Delicious');break;
+				  case 4: $('#presser').val('Ok, Your Turn');
+			  }
+			  
+	  	});
+	  });
+	  
+	</script>
+</head>
+
+<body>
+  <h1>Random Acts of Interactivity</h1>
+  <h3>A story, in three acts</h3>
+
+  <div id="page">
+		<div id="tabs">
+			<ul>
+				<li> <a href="#step01">Act 1</a></li>
+				<li> <a href="#step02">Act 2</a></li>
+				<li> <a href="#step03">Act 3</a></li>
+			</ul>
+
+	    <div class="stepContent" id="step01">
+		    <h2>Alice and the Ice Cream</h2>
+        <p>Alice was a delightful, vivacious and painfully cute 2-year old who was our neighbor from January until August. We went on many outings and adventures with Alice and her family, to include this trip to Alameda for ice cream.</p>
+        
+        <img src="images/alice01.jpg" id='icecream' alt="alice01" height="400" />
+        <p></p>
+        <input type="button" value="Get Ice Cream" id="presser">
+        <p><strong>Full disclosure:</strong> The Javascript used for this sequence is overwrought and suboptimized. It should not be used as a model for anything.</p>
+	    </div>
+	    <div class="stepContent" id="step02">	    
+			  <h2>Gale, Wale and Me</h2>
+			  <p>Gale and Wale were two Thai school teachers that volunteered to accompany my Psychological Operations team and me throughout a number of villages in their immediate area while we conducted missions in their area. After the first visit, I decided that I would get a picture with both of that at every stop we made.</p>
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 450px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 450px; overflow: hidden;">
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm001.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Our first stop</div>
+            </div>
+
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm002.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 320px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 14px; color: #ffffff; line-height: 30px; text-align: center;">Met a family with some of their schoolkids</div>
+            </div>
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm003.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 30px; left: 180px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Stopped at numerous local markets</div>
+            </div>
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm004.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 370px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 12px; color: #ffffff; line-height: 30px; text-align: center;">After a delicious lunch at a lakeside restaurant</div>
+            </div>
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm005.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.6); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Stopping for a drink</div>
+            </div>
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm006.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 350px; left: 200px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 12px; color: #ffffff; line-height: 30px; text-align: center;">Near the Cambodian border (Dear NSA: I didn't cross it!!)</div>
+            </div>
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm007.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 300px; left: 125px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Towards the end and getting a bit tired</div>
+            </div>
+            
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/gwm008.jpg" />
+                <div data-u="caption" data-t="3" style="position: absolute; top: 360px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 12px; color: #ffffff; line-height: 30px; text-align: center;">Made it back to their school with the whole team</div>
+            </div>
+        
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    </div>
+		<div>
+				<p><strong>Full Disclosure: </strong>I am using a slightly hacked version of the <a href="http://www.jssor.com">Jssor Image Slider which can be found here.</a></p>
+		</div>
+		</div>
+
+
+	    <div class="stepContent" id="step03">
+        <h2>Preparation</h2>
+				<p>To begin, you'll need to turn on your water-boiling device. Once you've done
+					that, set your timer for 4 minutes BUT don't turn it on. You'll need it at a
+			    later step.</p>
+			  <img src="images/IMG_3779.jpg" alt="IMG_3779" width="400" height="400" />
+			  <img src="images/IMG_3782.jpg" alt="IMG_3782" width="400" height="400" />
+      </div>
+    </div>
+  </div>
+  <div id="clearingdiv"></div>
+</body>
+</html>
