@@ -88,15 +88,25 @@
 			  
 	  	});
 	  	$("#dealer").on("click", function(){
-			  x = Math.floor(Math.random() * 9) + 2;
-			  s = Math.floor(Math.random() * 3);
+			  x = Math.floor(Math.random() * 13) + 1;
+			  switch(x) {
+				  case 1: x = 'a';break;
+				  case 11: x = 'j';break;
+				  case 12: x = 'q';break;
+				  case 13: x = 'k';
+			  }
+
+			  s = Math.floor(Math.random() * 4);
 			  switch(s) {
 				  case 0: s = 'hearts';break;
 				  case 1: s = 'clubs';break;
 				  case 2: s = 'spades';break;
-				  case 3: s = 'diamonds';
+				  case 3: s = 'diams';
 			  }
 			  $('#cardface').attr('class', 'card rank-' + x + ' ' + s);
+			  if (typeof x != 'number') {
+				  x = x.toUpperCase();
+			  }
 			  $('#cardclass').text(x);
 			  $('#cardsuit').html("&" + s + ";");			  
 	  	});
@@ -194,9 +204,9 @@
 	    <div class="stepContent" id="step03">
         <h2>Play a card, any card</h2>
         <p>At this time, you'll only get numbered cards; no faces, aces or jokers.</p>
-				<div class="playingCards">
-			    <div id="cardface" class="card rank-2 hearts">
-			        <span id="cardclass" class="rank">7</span>
+				<div class="playingCards faceImages">
+			    <div id="cardface" class="card rank-q hearts">
+			        <span id="cardclass" class="rank">Q</span>
 			        <span id="cardsuit" class="suit">&hearts;</span>
 			    </div>
 				</div>
