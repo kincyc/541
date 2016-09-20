@@ -4,16 +4,13 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xml:lang="en">
 <head>
+  <link rel="stylesheet" type="text/css" href="css/cards.css" media="screen"/>
   <link rel="stylesheet" href="css/main.css" type="text/css" />
   <link rel="stylesheet" href="css/cupertino/jquery-ui-1.10.4.custom.css" />
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/jquery-ui-1.10.4.custom.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" />
-  <style type="text/css">
-/*<![CDATA[*/
-        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-  /*]]>*/
-  </style>
+
 
   <title>Random Acts of Interactivity</title>
   
@@ -90,6 +87,19 @@
 			  }
 			  
 	  	});
+	  	$("#dealer").on("click", function(){
+			  x = Math.floor(Math.random() * 9) + 2;
+			  s = Math.floor(Math.random() * 3);
+			  switch(s) {
+				  case 0: s = 'hearts';break;
+				  case 1: s = 'clubs';break;
+				  case 2: s = 'spades';break;
+				  case 3: s = 'diamonds';
+			  }
+			  $('#cardface').attr('class', 'card rank-' + x + ' ' + s);
+			  $('#cardclass').text(x);
+			  $('#cardsuit').html("&" + s + ";");			  
+	  	});
 	  });
 	  
 	</script>
@@ -124,7 +134,7 @@
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+            <div style="position:absolute;display:block;background:url('images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 450px; overflow: hidden;">
             
@@ -181,18 +191,23 @@
 				<p><strong>Full Disclosure: </strong>I am using a slightly hacked version of the <a href="http://www.jssor.com">Jssor Image Slider which can be found here.</a></p>
 		</div>
 		</div>
-
-
 	    <div class="stepContent" id="step03">
-        <h2>Preparation</h2>
-				<p>To begin, you'll need to turn on your water-boiling device. Once you've done
-					that, set your timer for 4 minutes BUT don't turn it on. You'll need it at a
-			    later step.</p>
-			  <img src="images/IMG_3779.jpg" alt="IMG_3779" width="400" height="400" />
-			  <img src="images/IMG_3782.jpg" alt="IMG_3782" width="400" height="400" />
-      </div>
-    </div>
-  </div>
+        <h2>Play a card, any card</h2>
+        <p>At this time, you'll only get numbered cards; no faces, aces or jokers.</p>
+				<div class="playingCards">
+			    <div id="cardface" class="card rank-2 hearts">
+			        <span id="cardclass" class="rank">7</span>
+			        <span id="cardsuit" class="suit">&hearts;</span>
+			    </div>
+				</div>
+				<p></p>
+				<input type="button" value="Deal a New Card" id="dealer">
+				<p></p>
+				<p></p>
+				<p><a href="https://github.com/selfthinker/CSS-Playing-Cards">CSS Playing Cards library developed by Anike Henke.</a></p>
+			</div>
+		</div>
   <div id="clearingdiv"></div>
+  </div>
 </body>
 </html>
