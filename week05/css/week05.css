@@ -250,6 +250,11 @@ a {
     color: inherit
 }
 
+.highlight {
+	background-color: rgba(226, 230, 45, 0.83);
+	text-transform:capitalize;
+}
+
 .divTable{
 	display: table;
 	width: 100%;
