@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en">
+<head>
+  <link rel="stylesheet" href="css/week05.css" type="text/css" />
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> <script>
+	  $(function(){
+		  $("#submit").click( function(){ 
+			  localStorage.setItem("firstName",$("#firstName").val());
+		  });
+    });
+ </script>
+  <title>Please Help!!</title>
+</head>
+
+
+<body>
+	
+<p>	Please GOOD Sir or Ma'am, I am in desperate need of your assistance.</p>
+<p>It is by the Grace of all that is HOLY that you have found this web form. Please provide me with your blessed first name (or the name by which you like to be called) and kindly press the "Go" button.
+</p>	
+<p>
+	<form action="proposal.html">
+	<input type="text" size="35" id="firstName" /> &nbsp;&nbsp;<input type="submit" id="submit" value="Go" /></p>
+       </form>
+</body>
+</html>

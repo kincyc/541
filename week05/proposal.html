@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en">
+<head>
+  <link rel="stylesheet" href="css/week05.css" type="text/css" />
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script>
+	  $(function(){
+		  name = localStorage.getItem("firstName");
+		  $("#firstName").html(name);
+		  $("#submit").click( function(){ 
+			  localStorage.setItem("fullName",$("#fullName").val());
+			  localStorage.setItem("company",$("#company").val());
+			  localStorage.setItem("bankName",$("#bankName").val());
+			  localStorage.setItem("email",$("#email").val());
+		  });
+    });
+	</script>
+<title>A Private Business Proposal</title>
+</head>
+
+<!--
+The web page uses an HTML Table with at least two columns and two rows.
+There is at least one media file (video or audio) that has been uploaded to ITCDLand
+There is a video that includes at least two embedded questions
+There is an image as the background of the webpage
+Provide comments to at least one peer's lab.
+
+-->
+
+<body>
+
+
+<div id="wrapper">
+<h1>PRIVATE BUSINESS PROPOSAL</h1>
+<p>Dear <span style="text-transform:capitalize;" id="firstName"></span>,</p>
+<p>First I must solicit your confidence in this transaction. This is by virtue of its nature as being utterly confidential and top secret. We are top officials of the Federal Government Contract Review Panel who are interested in importation of goods into our country with funds which are presently trapped in Nigeria. In order to commence this business we solicit your assistance to enable us RECEIVE the said trapped funds ABROAD.
+</p>
+<p>The source of this fund is as follows : During the  regime of our late head of state, Gen. Sani Abacha, the government officials set up companies and awarded themselves contracts which were grossly over-invoiced in various Ministries. The NEW CIVILIAN  Government set up a Contract Review Panel (C.R.P) and we have identified a lot of inflated contract funds which are presently floating in the Central Bank of Nigeria (C.B.N).
+</p>
+<p>However, due to our position as civil servants and members of this panel, we cannot acquire this money in our names. I have therefore, been delegated as a matter of trust by my colleagues of the panel to look for an Overseas partner INTO whose ACCOUNT the sum of US$31,000,000.00 (Thirty one Million United States Dollars) WILL BE PAID BY TELEGRAPHIC TRANSFER. Hence we are writing you this letter. We have agreed to share the money thus:
+</p>
+<ul>
+<li>70% for us (the officials)</li>
+<li>20% for the FOREIGN PARTNER (you)</li>
+<li>10% to be used in settling taxation and all local and foreign expenses.</li>
+</ul>
+<p>It is from this 70% that we wish to commence the importation business. </p>
+
+<p>Please note that this transaction is 100% safe and we hope THAT THE FUNDS CAN ARRIVE YOUR ACCOUNT in latest ten (10) banking days from the date of receipt of the following information by using this helpful form:
+</p>
+<form action="response.html">
+
+<table width=500px>
+	<tr>
+		<td width="50%">Your Full Name:</td>
+		<td><input type="text" size="35" id="fullName" /><br></td>
+	</tr>
+	<tr>
+		<td width="50%">Registered Business Name</td>
+		<td><input type="text" size="35" id="company" /><br></td>
+	</tr>
+	<tr>
+		<td>Your Banking Institution</td>
+		<td><input type="text" size="35" id="bankName" /><br></td>
+	</tr>
+	<tr>
+		<td>Your Email Address</td>
+		<td><input type="text" size="35" id="email" /><br></td>
+	</tr>
+
+</table>
+
+<p>The above information will enable us write letters of claim and job description respectively. This way we will use your registered company's name to apply for payments and re-award the contract in your company name. We are looking forward to doing business with you and solicit your confidentiality in this transaction.</p>
+
+<p>Please acknowledge receipt of this form and send us the requested information by pressing the "respond" button. I will bring you into the complete picture of this pending project when I have heard from you.
+</p>
+
+<p>Yours Faithfully,</p>
+
+<h4>DR. KAREEM ISA EGWUATU.</h4>
+
+<input type="submit" id="submit" value="Respond" />
+       </form>
+    </div>		
+	
+	
+</body>
+</html>
