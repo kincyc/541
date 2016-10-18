@@ -7,51 +7,116 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="css/final.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<script src="js/jquery-1.9.1.js"></script>	
+	<script src="js/jquery-ui.js"></script>
+  <script>$( function() {$("#tabs").tabs(); }); </script>
 </head>
 
-<body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.html"><span class="logo_colour">Interpreters</span></a></h1>
-          <h2>Selection, training and deployment</h2>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li class="selected"><a href="lesson01.html">Lesson 1</a></li>
-          <li><a href="lesson02.html">Lesson 2</a></li>
-          <li><a href="lesson03.html">Lesson 3</a></li>
-          <li><a href="lesson04.html">Lesson 4</a></li>
-        </ul>
+<div id="main">
+  <div id="header">
+    <div id="logo">
+      <div id="logo_text">
+        <!-- class="logo_colour", allows you to change the colour of the text -->
+        <h1><a href="index.html"><span class=
+        "logo_colour">Interpreters</span></a></h1>
+        <h2>Selection, training and deployment</h2>
       </div>
     </div>
-    <div id="site_content">
-      <div id="content">
-				<h1>Selection an Interpreter</h1>
-	      <p>Important things about selecting an interpreter go here. League fan batter's box fair center field on deck wrigley squeeze. Pitchout win doubleheader lineup pull, at-bat stadium. Pinch runner season breaking ball knuckleball batting average leather at-bat. Hardball bleeder fair flyout cubs peanuts pinch hitter. Peanuts blue manager designated hitter relief pitcher pinch runner inning. Bullpen catcher all-star moneyball hardball range base on balls center fielder.</p>
-	      <span class="caption">jQuery accordion goes here (might change to tab)</span>
-	      <h2>Section 1 - Considerations</h2>
-	      <p>Important things about selecting an interpreter go here. League fan batter's box fair center field on deck wrigley squeeze. Pitchout win doubleheader lineup pull, at-bat stadium. Pinch runner season breaking ball knuckleball batting average leather at-bat. Hardball bleeder fair flyout cubs peanuts pinch hitter. Peanuts blue manager designated hitter relief pitcher pinch runner inning. Bullpen catcher all-star moneyball hardball range base on balls center fielder.</p>
-	      <span class="caption">These images relate to the considerations</span><br>
-	      <img src="images/placeholder06.jpg" width="100px"> <img src="images/placeholder07.jpg" width="100px">
-	      <img src="images/placeholder07.jpg" width="100px"> <img src="images/placeholder06.jpg" width="100px">
-	      
-	      
-				<h2>Section 2 - Things to watch out for</h2>
-				<p>Extra innings left fielder hardball appeal on-base percentage lineup unearned run dead red cardinals. Team right field hey batter starting pitcher world series, 1-2-3 shutout forkball game. Cubs assist southpaw rubber designated hitter visitors grand slam golden sombrero. Left fielder pinch hitter batting average tigers rally shift visitors diamond shortstop. Second baseman sweep contact appeal batting average plate starter. Game fielder's choice win contact out butcher boy cardinals club.
-				</p>
-				
-				<h2>Section 3 - Orientation</h2>
-				<p>Baltimore chop rhubarb warning track wild pitch unearned run doubleheader around the horn relief pitcher. Flyout plunked first baseman choke up fan knuckleball grass. Game plate slider count inning perfect game mustard no decision. Rainout sweep pinch runner inside on deck left on base 4-6-3. Backstop curve cookie slide swing league skipper game. Lineup pinch hitter rhubarb tapper 4-6-3, designated hitter outs.
-				</p>
-
-      </div>
+    <div id="menubar">
+      <ul id="menu">
+        <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li class="selected">
+          <a href="lesson01.html">Lesson 1</a>
+        </li>
+        <li>
+          <a href="lesson02.html">Lesson 2</a>
+        </li>
+        <li>
+          <a href="lesson03.html">Lesson 3</a>
+        </li>
+        <li>
+          <a href="lesson04.html">Lesson 4</a>
+        </li>
+      </ul>
     </div>
   </div>
-</body>
+  <div id="site_content">
+    <div id="content">
+      <h1>Selecting an Interpreter</h1>
+      <p>In some operational or training settings abroad, Civil Affairs
+      personnel will not need to do an initial selection of an interpreter.
+      Perhaps your higher headquarters has already established a local contract
+      to provide this service. In other cases, interpreters are chosen from a
+      pool provided by the host government. However, even if this is the case,
+      you should still review the selection guidelines because you will use
+      these same steps to conduct an initial evaluation.</p>
+      <p>The first step in selecting an interpreter is to obtain basic facts about the host nation. Basic
+civil information should include overall population, geography, ethnic groups, political system, prominent political figures, monetary system, business, agriculture, exports, etc. Try to get a military country study or purchase a guidebook like the <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=Culture+Smart%21%3A+The+Essential+Guide+to+Customs+%26+Culture">Culture Smart!: The Essential Guide to Customs & Culture series</a>. These resources provide great background that will help give you context and build rapport with the people you bring in for interviews. This background will also help you better understand some considerations below you need to take into account when you're selecting an interpreter.</p>
+      <h1>Considerations</h1>
+      <div id="tabs">
+        <ul class="tab">
+          <li class="tab"><a href="#nativeSpeaker">Native<br>Speaker</a></li>
+          <li class="tab"><a href="#socialStatus">Social<br>Status</a></li>
+          <li class="tab"><a href="#englishFluency">English<br>Fluency</a></li>
+          <li class="tab"><a href="#intelligence"><br>Intelligence</a></li>
+          <li class="tab"><a href="#technicalAbility">Technical<br>Ability</a></li>
+          <li class="tab"><a href="#reliability"><br>Reliability</a></li>
+          <li class="tab"><a href="#loyalty"><br>Loyalty</a></li>
+          <li class="tab"><a href="#demographics"><br>Demographics</a></li>
+          <li class="tab"><a href="#compatability"><br>Compatibility</a></li>
+        </ul>
+        <div id="nativeSpeaker">
+            <p>Find interpreters who are native speaker of the socially or geographically determined dialect. The interpreter’s speech, background, and mannerisms should be completely acceptable to the target audience so that attention is given only to what is said.</p>
+        </div>
+        <div id="socialStatus">
+            <p>In some situations and cultures, if an interpreter is considered in lower social standing than the audience, that interpreter is ineffective. This may include significant differences in military rank or membership in an ethnic or religious group. Regardless of the peacekeeper’s personal feelings on social status, the job is to accomplish the mission, not to act as an agent for social reform in a faraway land. Accept local prejudices as a fact.</p>
+        </div>
+        <div id="englishFluency">
+          <p>An often-overlooked consideration is how well the interpreter speaks English. As a rule, if the interpreter understands the peacekeeper and the peacekeeper understands the interpreter, then the interpreter’s command of English is satisfactory. Check the interpreter’s "understanding" by asking to paraphrase a statement in English.</p>
+        </div>
+        <div id="intelligence">
+          <p>Find interpreters who are quick, alert, and responsive to changing conditions and situations. An interpreter must be able to grasp complex concepts and discuss them without confusion in a reasonably logical sequence. Although education does not equate to intelligence, the better educated the interpreter, the better the interpreter will be able to perform due to exposure to diverse concepts.</p>
+        </div>
+        <div id="technicalAbility">
+          <p>In certain situations, the peacekeeper may need an interpreter with technical training or experience in special subject areas. The interpreter may need to translate the "meaning" as well as the "words."</p>
+        </div>
+        <div id="reliability">
+            <p>Be aware of the candidate interpreter who arrives late for the interview. Throughout the world, the concept of time varies widely. In many less developed countries, time is relatively unimportant. Make sure that the interpreter understands the military’s concern with punctuality.</p>
+        </div>
+        <div id="loyalty">
+            <p>If the interpreter is a local national, it is safe to assume that the interpreter’s first loyalty is to the HN, or sub-group, not the US military. The security implications are clear. Be very cautious in explaining concepts to give the interpreter "a greater depth of understanding."</p>
+            <p>Certain tactical situations may require the use of uncleared indigenous personnel as "field expedient" interpreters. Be aware of the increased security risk involved in using such personnel and carefully weigh the risk versus the potential gain. In addition, if uncleared interpreters are used, limit any sensitive information to a minimum.</p>
+        </div>
+        <div id="demographics">
+            <p>Gender, age, and race have the potential to seriously affect the mission. One example is the status of females in Muslim society. In predominantly Muslim countries, cultural prohibitions may affect the gender of the interpreter used under given circumstance. Another example is the Balkans, where the ethnic divisions may limit the effectiveness of an interpreter from outside the target audience’s group. Since traditions, values, and biases vary from country to country, it is important to check with the in-country assets or area studies for specific taboos or favorable characteristics.</p>
+        </div>
+        <div id="compatability">
+            <p>You and interpreter need to work as a team. The target audience is quick to recognize personality conflicts between the team members that can undermine the effectiveness of the communication effort. If possible, when selecting an interpreter, the peacekeeper needs to look for compatible traits and strive for a harmonious working relationship.</p>
+        </div>
+      </div>
+
+      <h1>Interview Process</h1>
+			<p>The following is a X-step process you can use for conducting an interview with a prospective interpreter. Important - ALWAYS interview at least 2 candidates. Even if you think the first person you interview is the ideal candidate, resist the urge to make an immediate hire and spend the extra time and effort conduct multiple interviews.</p>
+				<h2>Present the Opportunity (3-5 minutes)</h2>
+				<p>Briefly what you are looking for - what hours you need, environments and locations you'll be operating in and the types of missions (don't be too specific). However, don't spend too much time on this. Don't ramble on about all sorts of details and previous experiences. You need to draw information out of the interpreter and you won't do that by talking.</p>
+				<h2>Gain Information (10-15 minutes)</h2>
+				<p>Once you've outlined the basics, you'll want to start asking the candidate questions. Make sure your questions are open-ended and provide the interpreter opportunities to speak. Don't cut him or her off and start telling your story.</p>
+				<p>You'll want to ask questions about his or her interpreting experience, what types of missions they've worked on, what sort of conditions have they worked under. Also ask personal questions - ask about their family, where do they live, what other jobs do they have, where is their income coming from. Other good background questions can be about:</p>
+					<ul>
+						<li class="moi">If you're in a religiously sensitive area, you'll need to ask this question. It's something, as Americans (and in particular servicemembers) we're wired against talking about, but it's a critical question in some areas. If their religion is an unpopular or minority one, make sure you ask if that person will be comfortable working with your target population. IMPORTANT - don't spend too much time on this topic. just get the basics and move on.</li>
+						<li class="moi">Military service & background (if any)</li>
+						<li class="moi">where does he or she live? Locally? With whom? How long have they lived there? Where were they before?</li>
+						<li class="moi">Why does the person want to be an interpreter? Obviously because they are being paid, but there usually other motives. It's good to know what those are</li>
+						<li class="moi">What aspirations does the candidate have? What do they want to do in the future?</li>
+					</ul>
+					<p>These are just questions that can help you start the process. It's best if you can let the conversation flow and let the interpreter talk. At this point, you're evaluating his English skills, his ability to articulate ideas and have a smooth conversation. You are also looking for inconsistencies in stories and other potential red flags about his or her motivations.</p>
+				<h2>Close the Interview</h2>
+				<p>After about 15 minutes, you'll want to close out the interview. First ask if they have any questions or concerns. After answering them, finish up with the logistics. Find out when they can start, what rate are they looking for, how long of a contract can they support and what is the soonest they can commit. Don't commit anything, but establish a time when you'll get back to them.</p>
+    </div>
+  </div>
+</div>
 </html>

@@ -17,15 +17,47 @@ p
 h1, h2, h3, h4, h5, h6 
 { font: normal 179% 'century gothic', arial, sans-serif;
   color: #43423F;
-  margin: 0 0 15px 0;
+  margin: 0 0 5px 0;
   padding: 15px 0 5px 0;}
 
 h2
-{ font: normal 170% 'century gothic', arial, sans-serif;
+{ font: normal 150% 'century gothic', arial, sans-serif;
   color: #B60000;}
 
 h3
 { font: normal 125% 'century gothic', arial, sans-serif;}
+
+.captioned { 
+   position: relative; 
+}
+
+h3 span {
+	position: absolute; 
+	top: 280px; 
+	left: 0; 
+	bottom:22px;
+	width: 620px; 
+	color: black; 
+	font-size: 14px ;
+	opacity: .5;
+	background: black;
+	padding: 10px; 
+}
+
+h3 span:hover {
+	display: block;
+	position: absolute; 
+	top: 280px;
+	bottom:22px;
+	left: 0; 
+	width: 620px; 
+	opacity: .8;
+	color: white; 
+	font-size: 14px ;
+	background: black;
+	padding: 10px; 
+}
+
 
 h4, h5, h6
 { margin: 0;
@@ -39,13 +71,6 @@ h5, h6
 
 h6
 { color: #362C20;}
-
-.caption {
-	font: normal 100% courier, monospace;
-	background-color: yellow;
-	line-height: 1em;
-	padding: 0px 0px 0px 0px;
-}
 
 a, a:hover
 { border-bottom: 1px dotted;
@@ -86,23 +111,6 @@ blockquote
   padding: 5px 5px 5px 5px;
   border: 1px solid #E5E5DB;
   background: #FFF;}
-
-ul
-{ margin: 2px 0px 18px 16px;
-  padding: 0px;}
-
-ul li
-{ list-style-type: square;
-  margin: 0px 0px 6px 0px; 
-  padding: 0px;}
-
-ol
-{ margin: 8px 0px 0px 24px;
-  padding: 0px;}
-
-ol li
-{ margin: 0px 0px 11px 0px; 
-  padding: 0px;}
 
 #main, #logo, #menubar, #site_content, #footer
 { margin-left: auto; 
@@ -202,15 +210,31 @@ ul#menu li a:hover
   width: 858px;
   padding: 0;}
 
-#content ul
-{ margin: 2px 0 22px 0px;}
+#content ol {
+    padding: 0px;
+}
 
-#content ul li
-{ list-style-type: none;
-  background: url(bullet.png) no-repeat;
-  margin: 0 0 0 0; 
-  padding: 0 0 4px 25px;
-  line-height: 1.5em;}
+#content ul {
+	margin: 0px 0 0px 0px;
+  padding: 0px;
+}
+
+#content ol li {
+	padding: 0px;
+	margin-left: 0px;
+}
+
+#content ul li {
+  margin: 0px;
+}
+
+#content li.moi {
+	list-style-type: circle;
+	margin: 0px 0px 5px 20px;
+  padding: 0px;
+
+}
+
 
 #footer
 { width: 916px;
