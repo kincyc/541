@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Interpreters</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/final.css" />
+	<script src="js/jquery-1.9.1.js"></script>
+	<script>
+		$(function(){
+		  name = localStorage.getItem("firstName");
+		  $("#firstName").html(name);
+		});
+	</script>  
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html"><span class="logo_colour">Interpreters</span></a></h1>
+          <h2>Selection, training and deployment</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page01.html">Selection</a></li>
+          <li><a href="page02.html">Training</a></li>
+          <li><a href="page03.html">Positioning</a></li>
+          <li><a href="page04.html">Verbal Techniques</a></li>
+          <li class="selected"><a href="page05.html">Summary</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="content">
+<h1>Summary</h1>
+
+<p><span id="firstName"></span>, here is a summary of the key points in this primer.</p>
+
+<h1>Considerations for Selection</h1>
+<ul>
+<li>Native Speaker</li>
+<li>Social Status</li>
+<li>English Fluency</li>
+<li>Intelligence</li>
+<li>Technical Ability</li>
+<li>Reliability</li>
+<li>Loyalty</li>
+<li>Demographics</li>
+<li>Compatibility</li>
+</ul>
+
+<h1>Training</h1>
+<ul>
+	<li>Stress the importance of the interpreter's role</li>
+	<li>Make sure the interpreter is translating, not providing information</li>
+	<li>Train your interpreter in safe, low-stakes environments</li>
+</ul> 
+	
+
+<h1>Positioning</h1>
+<ul>
+	<li>Position the interpreter by your side</li>
+	<li>If possible, position the interpreter between you and the target</li>
+	<li>Always look at and talk directly to the target(s)</li>
+	<li>Don't talk to the interpreter</li>
+</ul>
+
+<h1>Verbal Techniques</h1>
+<ul>
+<li>Keep the entire presentation as simple as possible.</li>
+<li>Use short sentences and simple words (low context).</li>
+<li>Avoid idiomatic English.</li>
+<li>Avoid flowery language.</li>
+<li>Avoid slang and colloquial expressions.</li>
+<li>Don't use profanity.</li>
+</ul>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
